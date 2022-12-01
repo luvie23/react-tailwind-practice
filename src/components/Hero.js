@@ -2,7 +2,7 @@ import React from 'react'
 
 
 
-import bgImg from '../assets/coco.jpg'
+import bgImg from '../assets/sandals.png'
 
 const Hero = () => {
     return (
@@ -12,6 +12,9 @@ const Hero = () => {
                     <p>classy. stylish. chic.</p>
                     <h1 className='text-5xl'>Filipino Made Shoes</h1>
                     <button className='py-3 px-6 sm:w-[60%] my-4 bg-slate-200'> shop now</button>
+                </div>
+                <div className='flex justify-center'>
+                    <img className='object-cover h-80 w-80  rounded-full border border-amber-200' src={bgImg}></img>
                 </div>
             </div>
         </div>
