@@ -4,6 +4,9 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
+    fontFamily: {
+      'OpenSans': ['"Open Sans"', 'sans-serif' ]
+    },
     screens: {
       'sm': '576px',
       // => @media (min-width: 576px) { ... }
@@ -18,3 +21,5 @@ module.exports = {
   },
   plugins: []
 }
+
+

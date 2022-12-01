@@ -10,7 +10,7 @@ const Navbar = () => {
 
 
     return(
-        <div className='w-screen h-[80px] z-10 bg-amber-400 fixed drop-shadow-md'>
+        <div className='w-screen h-[80px] z-10 bg-amber-400 fixed drop-shadow-md font-OpenSans'>
             <div className='px-2 flex justify-between items-center w-full h-full'>
                 <div className='flex items-center'>
                     <h1 className='text-5xl font-bold mr-4 sm:text-6xl'>COCO.</h1>
