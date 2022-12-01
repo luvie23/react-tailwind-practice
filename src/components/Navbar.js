@@ -2,6 +2,8 @@ import React, {useState} from 'react'
 
 import {Bars3Icon, XMarkIcon} from '@heroicons/react/24/outline'
 
+import bgImg from '../assets/coco.jpg'
+
 const Navbar = () => {
     const [nav, setNav] = useState(false)
     const handleClick = () => setNav(!nav)
