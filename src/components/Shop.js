@@ -4,7 +4,7 @@ import shoeImg from '../assets/placeholder.png'
 
 const Shop = () => {
     return (
-        <div className='w-full h-fit bg-slate-300 '>
+        <div className='w-full h-fit  bg-slate-300 pt-36 md:h-screen'>
             <div className=' flex flex-wrap justify-center '>
                 <Item price='300' img={shoeImg} text={'shoeName'}/>
                 <Item price='300' img={shoeImg} text={'shoeName'}/>
