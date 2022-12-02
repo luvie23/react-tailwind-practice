@@ -8,8 +8,7 @@
         @apply p-4
     }
 
-    button {
-        @apply text-black  border-amber-900 hover:text-white rounded-md p-3 border-none bg-transparent mr-4
-    }
+
 }
+
 

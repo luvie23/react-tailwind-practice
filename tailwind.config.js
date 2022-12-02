@@ -4,6 +4,7 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
+
     fontFamily: {
       'OpenSans': ['"Open Sans"', 'sans-serif' ]
     },
@@ -17,7 +18,8 @@ module.exports = {
       'lg': '1440px',
       // => @media (min-width: 1440px) { ... }
     },
-    extend: {},
+    extend: {
+    },
   },
   plugins: []
 }
