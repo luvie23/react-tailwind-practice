@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 
 import {Bars3Icon, XMarkIcon} from '@heroicons/react/24/outline'
-
+import {Link} from 'react-router-dom'
 
 
 const Navbar = () => {
@@ -15,25 +15,25 @@ const Navbar = () => {
                 <div className='flex items-center'>
                     <h1 className='text-5xl font-bold mr-4 sm:text-6xl'>COCO.</h1>
                     <ul className='hidden md:flex'>
-                        <li>home</li>
-                        <li>shop</li>
+                        <li><Link to='/'>home</Link></li>
+                        <li><Link to='/shop'>shop</Link></li>
                     </ul>
                 </div>
-                <div className='hidden md:flex pr-4'>
-                    <button>contact</button>
-                    <button>help</button>
-                </div>
+                <ul className='hidden md:flex pr-4'>
+                    <li>contact</li>
+                    <li>help</li>
+                </ul>
                 <div className='md:hidden' onClick={handleClick}>
                     {!nav ? <Bars3Icon className='w-5'/>: <XMarkIcon className='w-5'/>}
                 </div>
             </div>
 
         <ul className={!nav ? 'hidden' : 'absolute bg-amber-400 w-full px-8'}>
-            <li className='border-b-2 border-amber-500 w-full'>home</li>
-            <li className='border-b-2 border-amber-500 w-full'>shop</li>
+            <li><Link to='/'>home</Link></li>
+            <li><Link to='/shop'>shop</Link></li>
             <div>
-                <button>contact</button>
-                <button>help</button>
+                <li>contact</li>
+                <li>help</li>
             </div>
         </ul>
 
