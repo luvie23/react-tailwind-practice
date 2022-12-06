@@ -1,51 +1,47 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { BsArrowRightSquareFill, BsArrowLeftSquareFill } from "react-icons/bs";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-
-import "swiper/css";
-import "swiper/css/navigation";
-import { Navigation } from "swiper";
 
 import sandals1 from '../assets/sandals.png'
 import sandals2 from '../assets/sandals2.png'
 import sandals3 from '../assets/sandals3.png'
 
+const slides = [
+    sandals1,
+    sandals2,
+    sandals3
+]
 
-export default function Carousel() {
+
+const Carousel = () => {
+    const [cardIndex, setCardIndex] = useState(0)
+    const length = slides.length
+
+    const prevSlide = () => {
+        setCardIndex(cardIndex === length -1 ? 0 : cardIndex +1)
+    }
+        
+    const nextSlide = () => {
+        setCardIndex( cardIndex === 0 ? length -1 : cardIndex - 1)
+    }
+
     return (
-        <div className='flex justify-center items-center bg-gradient-to-b from-[#0099ff] via-purple-300 to-slate-300'>
-            <div className='h-fit w-1/2 '>
-                <Swiper
-                    navigation={true}
-                    modules={[Navigation]}
-                    className="mySwiper"
-                    style={{
-                        "--swiper-navigation-color": "#881337"
-                      }}
-                >
-                    <SwiperSlide className='flex justify-center items-center'>
-                        <img
-                            className="object-cover w-full h-96 md:w-96 rounded-3xl"
-                            src={sandals1}
-                            alt="image slide 1"
-                        />
-                    </SwiperSlide>
-                    <SwiperSlide className='flex justify-center items-center'>
-                        <img
-                            className="object-cover w-full h-96 md:w-96 rounded-3xl"
-                            src={sandals2}
-                            alt="image slide 2"
-                        />
-                    </SwiperSlide>
-                    <SwiperSlide className='flex justify-center items-center'>
-                        <img
-                            className="object-cover w-full h-96 md:w-96 rounded-3xl"
-                            src={sandals3}
-                            alt="image slide 3"
-                        />
-                    </SwiperSlide>
-                </Swiper>
-            </div>
+        <div className='max-w-[1240px] mx-auto px-4 py-16 relative flex justify-center items-center'>
+            <BsArrowLeftSquareFill  
+            onClick={prevSlide}
+            className='absolute top-[50%] text-3xl text-white cursor-pointer left-5' />
+            <BsArrowRightSquareFill 
+            onClick={nextSlide}
+            className='absolute top-[50%] text-3xl text-white cursor-pointer right-5' />
+            {slides.map((item, index) => (
+                <div className={index === cardIndex ? 'opacity-100' : 'opacity-0'}>
+                    {index === cardIndex && (<img className='object-cover  w-80  rounded-md border border-rose-100
+                    bg-rose-200 md:h-50 sm:w-50' src={item}></img>)}
+                </div>
+            ))}
         </div>
-    );
+    )
 }
+
+
+export default Carousel

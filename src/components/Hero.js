@@ -1,6 +1,13 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import bgImg from '../assets/sandals.png'
+import Carousel from './Carousel'
+
+import sandals1 from '../assets/sandals.png'
+import sandals2 from '../assets/sandals2.png'
+import sandals3 from '../assets/sandals3.png'
+
+
 
 
 const Hero = () => {
@@ -14,9 +21,10 @@ const Hero = () => {
                         <div><Link to='/shop'className='py-3 px-6 sm:w-[60%] my-4 bg-gradient-to-r from-amber-300 to-rose-300 rounded-md'>shop now</ Link></div>
                     </div>
                     <div className='flex justify-center'>
-                        <img className='object-cover  w-80  rounded-full border border-rose-100
-                    bg-rose-200 md:h-50 sm:w-50' src={bgImg}></img>
+                    
+                    <Carousel />
                     </div>
+                    
                 </div>
             </div>
 
