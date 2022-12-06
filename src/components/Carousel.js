@@ -34,9 +34,9 @@ const Carousel = () => {
             onClick={nextSlide}
             className='absolute top-[50%] text-3xl text-white cursor-pointer right-5' />
             {slides.map((item, index) => (
-                <div className={index === cardIndex ? 'opacity-100' : 'opacity-0'}>
+                <div className={index === cardIndex ? 'opacity-100 transition ease-in-out delay-150' : 'opacity-0 transition ease-in-out delay-150' }>
                     {index === cardIndex && (<img className='object-cover  w-80  rounded-md border border-rose-100
-                    bg-rose-200 md:h-50 sm:w-50' src={item}></img>)}
+                    bg-rose-200 md:h-50 sm:w-50 ' src={item}></img>)}
                 </div>
             ))}
         </div>

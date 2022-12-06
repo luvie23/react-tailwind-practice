@@ -16,7 +16,7 @@ function App() {
 
       <Routes>
         <Route path='/' element={<div><Hero/> <div className='flex justify-center items-center bg-gradient-to-b from-[#0099ff] via-purple-300 to-slate-300 h-96'></div> <Shop/>
-        <Carousel />
+
         </div>} />
         <Route path='/shop' element={<Shop/>} />
 
