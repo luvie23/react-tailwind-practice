@@ -19,11 +19,11 @@ const Navbar = () => {
                         <li><Link to='/shop'>shop</Link></li>
                     </ul>
                 </div>
-                <ul className='hidden md:flex pr-4'>
+                <ul className='hidden md:flex '>
                     <li>contact</li>
                     <li>help</li>
                 </ul>
-                <div className='md:hidden' onClick={handleClick}>
+                <div className='md:hidden pr-7' onClick={handleClick}>
                     {!nav ? <Bars3Icon className='w-5'/>: <XMarkIcon className='w-5'/>}
                 </div>
             </div>
